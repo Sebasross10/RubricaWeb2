@@ -1,7 +1,6 @@
 # Rubrica Corte 1 Desarrollo Web II
 
-- Yan De La Torre
-- Aldo Puello
-- Maroly Velasquez
+.Sebastian Rodriguez
+-Josttin Perez
 
-Despliegue en Netlify: https://rubricawebii.netlify.app/
+
