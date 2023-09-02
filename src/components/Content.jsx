@@ -6,12 +6,12 @@ const Content = () => {
 
   const [selectedCategory, setSelectedCategory] = React.useState('Todas');
 
-  const categories = ['Todas', ...new Set(data.dataMovie.map(item => item.categoria))];
+  const categories = ['Todas', ...new Set(data.dataCard.map(item => item.categoria))];
 
   const filteredData =
     selectedCategory !== 'Todas'
-      ? data.dataMovie.filter(item => item.categoria === selectedCategory)
-      : data.dataMovie;
+      ? data.dataCard.filter(item => item.categoria === selectedCategory)
+      : data.dataCard;
 
   return (
     <div className="container mt-5">
@@ -34,7 +34,7 @@ const Content = () => {
       </div>
       <div className="row">
         {filteredData.map(elemento => (
-          <div className="col-md-4 mb-4" key={elemento.id}>
+          <div className="col-md-4 mb-4">
             <div className="card">
               <img src={elemento.image} alt={elemento.titulo} className="card-img-top" />
               <div className="card-body">
