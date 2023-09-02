@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap'; // Importa los componentes de Bootstrap
+import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
 import { Contexto } from '../contexto/Contexto';
 
 const Create = (props) => {
@@ -10,7 +10,7 @@ const Create = (props) => {
     image: '',
     categoria: '',
     link: '',
-    referente: '', // Agregado el campo "referente"
+    referente: '',
   });
 
   const [errores, setErrores] = useState({
@@ -18,7 +18,7 @@ const Create = (props) => {
     descripcion: '',
     categoria: '',
     link: '',
-    referente: '', // Agregado el campo "referente"
+    referente: '',
   });
 
   const validarCampo = (campo, valor) => {
@@ -67,13 +67,13 @@ const Create = (props) => {
       validarCampo('image', formulario.image) ||
       validarCampo('link', formulario.link) ||
       validarCampo('referente', formulario.referente) ||
-      validarCampo('categoria', formulario.categoria) // Validación para el campo "categoría"
+      validarCampo('categoria', formulario.categoria)
     ) {
       alert('Rellene correctamente los campos indicads');
       return;
     }
     console.log(formulario);
-    contexto.setDataMov((current) => [...current, formulario]);
+    contexto.setDataCard((current) => [...current, formulario]);
     props.setContent(true);
     props.setCreate(false);
     props.setOver(false);
